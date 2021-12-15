@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-1: rgb(215, 244, 255);
+  --primary-2: rgb(102, 86, 158);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(var(--primary-1), var(--primary-2));
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90vw;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgb(58, 30, 75);
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+input {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+label {
+  color: grey;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid grey;
+  color: rgb(58, 30, 75);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--primary-2);
+}
+
+span {
+  padding-top: 0.5rem;
+  color: rgb(255, 55, 55);
+  font-size: 0.75rem;
+  display: none;
+}
+
+input:invalid[focused='true'] {
+  border: 2px solid rgb(255, 55, 55);
+}
+
+input:invalid[focused='true'] ~ span {
+  display: block;
+}
+
+button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.65rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-2);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+button:active {
+  transform: scale(0.98);
+}
